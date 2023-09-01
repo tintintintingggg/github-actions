@@ -1,7 +1,7 @@
 {
   "LABEL": {
     "name": "frontend",
-    "color": "EEEEE"
+    "color": "#1F3331"
   },
   "CHECKS": {
     "prefixes": ["fix: ", "feat: "],
