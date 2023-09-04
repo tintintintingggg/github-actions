@@ -1,21 +1,28 @@
-name: Add Labels
+name: Label PR based on Title
 
 on:
   pull_request:
-    type:
+    types:
       - opened
-      - edited
       - synchronize
 
 jobs:
-  run-script:
+  label-pr:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "14" # 使用 Node.js 的版本
+      - name: Checkout Code
+        uses: actions/checkout@v2
 
-      - name: Run My Node.js Script
-        run: node ../myscript.js
+      - name: Set PR Title
+        id: pr_title
+        run: echo "PR_TITLE=$(jq -r .pull_request.title $GITHUB_EVENT_PATH)" >> $GITHUB_ENV
+
+      - name: Run Label Script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          PR_TITLE: ${{ env.PR_TITLE }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: node .github/label-pr.js
