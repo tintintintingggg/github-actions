@@ -1,4 +1,4 @@
 frontend:
   - any: ["client/*", "app/javascript/*"]
-"skip js tests":
+"frontend":
   - all: ["!client/*", "!app/javascript/*"]
