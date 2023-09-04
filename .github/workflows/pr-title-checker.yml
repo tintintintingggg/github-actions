@@ -8,12 +8,14 @@ on:
       - synchronize
 
 jobs:
-  add_labels:
+  run-script:
     runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v2
 
-      - name: add labels
-        run: |
-          console.log('hi');
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14" # 使用 Node.js 的版本
+
+      - name: Run My Node.js Script
+        run: node .github/myscript.js
