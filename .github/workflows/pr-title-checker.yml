@@ -18,4 +18,4 @@ jobs:
           node-version: "14" # 使用 Node.js 的版本
 
       - name: Run My Node.js Script
-        run: node .github/myscript.js
+        run: node /.github/myscript.js
