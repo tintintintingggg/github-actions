@@ -19,5 +19,4 @@ jobs:
         if: ${{ startsWith(github.event.pull_request.title, 'feat') }}
         with:
           labels: |
-            documentation
-            changelog
+            frontend
