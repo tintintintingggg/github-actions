@@ -15,8 +15,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: add labels
-        uses: actions-ecosystem/action-add-labels@v1
-        if: ${{ startsWith(github.event.pull_request.title, 'feat') }}
-        with:
-          labels: |
-            frontend
+        run: |
+          console.log('hi');
