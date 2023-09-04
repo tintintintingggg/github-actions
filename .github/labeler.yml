@@ -3,5 +3,3 @@
   - app/javascript/**/*
 "skip js tests":
   - all: ["!client/**/*", "!app/javascript/**/*"]
-"test":
-  - client/**/*
