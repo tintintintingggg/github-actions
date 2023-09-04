@@ -1,20 +1,23 @@
-name: "PR Title Checker"
+name: Add Labels
 
 on:
-  pull_request_target:
+  pull_request:
     type:
       - opened
       - edited
       - synchronize
-      - labeled
-      - unlabeled
 
 jobs:
-  check:
+  add_labels:
     runs-on: ubuntu-latest
     steps:
-      - uses: thehanimo/pr-title-checker@v1.4.0
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: add labels
+        uses: actions-ecosystem/action-add-labels@v1
+        if: ${{ startsWith(github.event.pull_request.title, 'feat') }}
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          pass_on_octokit_error: false
-          configuration_path: .github/pr-title-checker-config.json
+          labels: |
+            documentation
+            changelog
