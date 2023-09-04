@@ -1,4 +1,4 @@
-"skip":
+"frontend":
   - client/**/*
   - app/javascript/**/*
 "skip js tests":
