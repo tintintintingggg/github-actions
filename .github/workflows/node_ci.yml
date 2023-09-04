@@ -6,7 +6,7 @@ on:
 
 jobs:
   add-labels:
-    uses: ./labeler.yml
+    uses: ./.github/workflow/labeler.yml
   js-tests:
     name: JS Tests (root app)
     runs-on: ubuntu-latest
