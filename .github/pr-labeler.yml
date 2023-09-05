@@ -1,4 +1,7 @@
 feature: ["feature/*", "feat/*"]
 enhance: ["enhance/*", "enhancement/*"]
-bug: ["bug/*", "fix/*"]
-chore :hammer:: chore/*
+bug2:
+  - bug/*
+  - fix/*
+chore: chore/*
+test: test/*
