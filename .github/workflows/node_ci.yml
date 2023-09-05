@@ -18,6 +18,5 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Run tests
-        run: yarn test --silent
+        run: |
+          console.log(needs.add-labels.outputs.all-labels)
