@@ -1,4 +1,4 @@
-const run = () => console.log("");
+const run = () => console.log("hi");
 
 try {
   run();
