@@ -22,7 +22,7 @@ jobs:
         with:
           configuration-path: ".github/pr-labeler.yml"
       - name: Label PRs based on head branch
+        if: ${{ github.base_ref == 'release'}}
         uses: actions/labeler@v4
-        if: ${{ github.base_ref == 'main'}}
         with:
           configuration-path: ".github/config/labeler.yml"
