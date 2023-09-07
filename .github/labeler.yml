@@ -1,5 +1,5 @@
-"frontend":
+frontend:
   - client/**/*
   - app/javascript/**/*
-"skip js tests":
-  - all: ["!client/**/*", "!app/javascript/**/*"]
+"skip jenkins":
+  - all: ["!**/*.rb", "!**/*.erb", "!config/locales/**/*"]
