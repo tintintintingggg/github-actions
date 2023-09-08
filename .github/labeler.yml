@@ -26,12 +26,15 @@ frontend:
       #     - "!app/assets/javascripts/map/main_canvas/image_path/**"
       #     - "!app/assets/javascripts/map/main_canvas/cell_layers_manager.js.erb"
 
-"skip jenkins":
+# "skip jenkins":
+#   - changed-files:
+#       - all:
+#           - "!**/*.rb"
+#           - "!**/*.erb"
+#           - "!config/locales/**/*"
+source:
   - changed-files:
-      - all:
-          - "!**/*.rb"
-          - "!**/*.erb"
-          - "!config/locales/**/*"
+      - any: ["src/**/*", "!src/docs/*"]
 feature:
   - head-branch: ["^feature/", "^feat/"]
 enhance:
