@@ -30,13 +30,13 @@ frontend:
 "skip jenkins":
   - changed-files:
       - all: ["!**/*.rb", "!**/*.erb", "!config/locales/**/*"]
-feature:
-  - head-branch: ["^feature/", "^feat/"]
-enhance:
-  - head-branch: ["^enhancement/", "^enhance/"]
-bug:
-  - head-branch: ["^bug/", "^fix/"]
-chore:
-  - head-branch: "^chore/"
-test:
-  - head-branch: "^test/"
+# feature:
+#   - head-branch: ["^feature/", "^feat/"]
+# enhance:
+#   - head-branch: ["^enhancement/", "^enhance/"]
+# bug:
+#   - head-branch: ["^bug/", "^fix/"]
+# chore:
+#   - head-branch: "^chore/"
+# test:
+#   - head-branch: "^test/"
