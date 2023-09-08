@@ -1,3 +1,6 @@
+source:
+- changed-files:
+  - any: ['src/**/*', '!src/docs/*']
 "merge into master":
   - base-branch: master
 "merge into release":
@@ -32,9 +35,7 @@ frontend:
 #           - "!**/*.rb"
 #           - "!**/*.erb"
 #           - "!config/locales/**/*"
-source:
-  - changed-files:
-      - any: ["src/**/*", "!src/docs/*"]
+
 feature:
   - head-branch: ["^feature/", "^feat/"]
 enhance:
