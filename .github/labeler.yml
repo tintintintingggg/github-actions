@@ -1,6 +1,3 @@
-source:
-- changed-files:
-  - any: ['src/**/*', '!src/docs/*']
 "merge into master":
   - base-branch: master
 "merge into release":
