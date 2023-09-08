@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Label PRs based on the paths of changed files
+      - name: Label PRs
         uses: actions/labeler@v5.0.0-alpha.1
         with:
           configuration-path: ".github/labeler.yml"

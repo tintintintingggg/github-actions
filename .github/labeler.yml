@@ -2,12 +2,23 @@
   - base-branch: master
 "merge into release":
   - base-branch: release
+feature:
+  - head-branch: ["^feature/", "^feat/"]
+enhance:
+  - head-branch: ["^enhancement/", "^enhance/"]
+bug:
+  - head-branch: ["^bug/", "^fix/"]
+chore:
+  - head-branch: "^chore/"
+test:
+  - head-branch: "^test/"
 frontend:
   - changed-files:
-      - client/**
-      - app/javascript/**
-      - spec/javascript/**
-      - config/webpack/**
+      - client/**/*
+      - app/javascript/**/*
+      - app/assets/javascripts/**/*
+      - spec/javascript/**/*
+      - config/webpack/**/*
       - config/webpacker.yml
       - babel.config.js
       - jest.config.js
@@ -21,24 +32,9 @@ frontend:
       - .prettierrc.yml
       - .prettierignore
       - .autocorrectignore
-      # - any:
-      #     - "app/assets/javascripts/**"
-      #     - "!app/assets/javascripts/map/main_canvas/image_path/**"
-      #     - "!app/assets/javascripts/map/main_canvas/cell_layers_manager.js.erb"
 
 "skip jenkins":
 - all:
   - changed-files: "!**/*.rb"
   - changed-files: "!**/*.erb"
   - changed-files: "!config/locales/**/*"
-
-feature:
-  - head-branch: ["^feature/", "^feat/"]
-enhance:
-  - head-branch: ["^enhancement/", "^enhance/"]
-bug:
-  - head-branch: ["^bug/", "^fix/"]
-chore:
-  - head-branch: "^chore/"
-test:
-  - head-branch: "^test/"
