@@ -16,7 +16,7 @@ jobs:
         uses: actions/labeler@v5.0.0-alpha.1
         with:
           configuration-path: ".github/labeler.yml"
-          sync-labels: false
+          sync-labels: true
       # - name: Label PRs based on branch name patterns
       #   uses: TimonVS/pr-labeler-action@v4
       #   with:
