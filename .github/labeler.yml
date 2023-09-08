@@ -28,8 +28,7 @@ frontend:
 
 "skip jenkins":
   - all:
-      - changed-files:
-          - all: ["!**/*.rb", "!**/*.erb", "!config/locales/**/*"]
+      - changed-files: ["!**/*.rb", "!**/*.erb", "!config/locales/**/*"]
 feature:
   - head-branch: ["^feature/", "^feat/"]
 enhance:
