@@ -34,8 +34,5 @@ frontend:
       #     - "!app/assets/javascripts/map/main_canvas/cell_layers_manager.js.erb"
 
 "skip jenkins":
-- all:
-  - changed-files: "!**/*.rb"
-  - changed-files: "!**/*.erb"
-  - changed-files: "!config/locales/**/*"
-
+  - all:
+      - changed-files: ["!**/*.rb", "!config/locales/**/*"]

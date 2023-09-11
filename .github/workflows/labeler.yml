@@ -17,12 +17,3 @@ jobs:
         with:
           configuration-path: ".github/labeler.yml"
           sync-labels: true
-      # - name: Label PRs based on branch name patterns
-      #   uses: TimonVS/pr-labeler-action@v4
-      #   with:
-      #     configuration-path: ".github/pr-labeler.yml"
-      # - name: Label PRs based on head branch
-      #   if: ${{ github.base_ref == 'release'}}
-      #   uses: actions/labeler@v4
-      #   with:
-      #     configuration-path: ".github/config/labeler.yml"
