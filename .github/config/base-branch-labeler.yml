@@ -1,0 +1,4 @@
+"merge into master":
+  - base-branch: master
+"merge into release":
+  - base-branch: release
