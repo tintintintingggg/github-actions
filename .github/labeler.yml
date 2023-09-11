@@ -35,8 +35,4 @@ frontend:
 
 "skip jenkins":
   - all:
-      - changed-files: "!**/*.rb"
-      - changed-files: "!**/*.erb"
-      - changed-files: "!config/locales/**/*"
-# - all:
-#   - changed-files: ["!**/*.rb"]
+      - changed-files: ["!**/*.rb", "!config/locales/**/*"]
