@@ -34,7 +34,9 @@ frontend:
       - .autocorrectignore
 
 "skip jenkins":
-- all:
-  - changed-files: "!**/*.rb"
-  - changed-files: "!**/*.erb"
-  - changed-files: "!config/locales/**/*"
+  - all:
+      - changed-files: "!**/*.rb"
+      - changed-files: "!**/*.erb"
+      - changed-files: "!config/locales/**/*"
+# - all:
+#   - changed-files: ["!**/*.rb"]
