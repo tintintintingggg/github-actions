@@ -33,6 +33,6 @@ frontend:
       - .prettierignore
       - .autocorrectignore
 
-"skip jenkins":
-  - all:
-      - changed-files: ["!**/*.rb", "!config/locales/**/*"]
+source:
+  - changed-files:
+      - any: ["src/**/*", "!src/docs/*"]
