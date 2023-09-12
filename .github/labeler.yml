@@ -13,25 +13,27 @@ chore:
 test:
   - head-branch: "^test/"
 frontend:
-  - changed-files:
-      - client/**/*
-      - app/javascript/**/*
-      - app/assets/javascripts/**/*
-      - spec/javascript/**/*
-      - config/webpack/**/*
-      - config/webpacker.yml
-      - babel.config.js
-      - jest.config.js
-      - postcss.config.js
-      - relay.config.js
-      - jsconfig.json
-      - yarn.lock
-      - package.json
-      - .eslintrc.yml
-      - .eslintignore
-      - .prettierrc.yml
-      - .prettierignore
-      - .autocorrectignore
+  - all:
+      - head-branch: ["^(?!develop$)", "^(?!release$)", "^(?!master$)"]
+      - changed-files:
+          - client/**/*
+          - app/javascript/**/*
+          - app/assets/javascripts/**/*
+          - spec/javascript/**/*
+          - config/webpack/**/*
+          - config/webpacker.yml
+          - babel.config.js
+          - jest.config.js
+          - postcss.config.js
+          - relay.config.js
+          - jsconfig.json
+          - yarn.lock
+          - package.json
+          - .eslintrc.yml
+          - .eslintignore
+          - .prettierrc.yml
+          - .prettierignore
+          - .autocorrectignore
 
 "wait other branches":
   - all:
