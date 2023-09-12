@@ -33,6 +33,5 @@ frontend:
       - .prettierignore
       - .autocorrectignore
 
-source:
-  - changed-files:
-      - any: ["src/**/*", "!src/docs/*"]
+"wait other branches":
+  - base-branch: ["!develop", "!master", "!release"]
