@@ -34,6 +34,6 @@ frontend:
       - .autocorrectignore
 
 "wait other branches":
-  - base-branch: "^develop$"
+  - base-branch: "main"
     # - base-branch: ["!develop", "!master", "!release"]
 #
