@@ -35,5 +35,6 @@ frontend:
 
 "wait other branches":
   - all:
-      - base-branch: ["!develop", "!master", "!release"]
+      - base-branch: "!develop"
+        # - base-branch: ["!develop", "!master", "!release"]
 #
