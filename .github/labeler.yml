@@ -14,7 +14,7 @@ test:
   - head-branch: "^test/"
 frontend:
   - all:
-      - base-branch: "main"
+      - head-branch: "main"
   - any:
       - changed-files:
           - client/**/*
