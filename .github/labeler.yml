@@ -15,6 +15,7 @@ test:
 frontend:
   - all:
       - base-branch: "main"
+  - any:
       - changed-files:
           - client/**/*
           - app/javascript/**/*
