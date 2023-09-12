@@ -10,28 +10,26 @@ test:
   - head-branch: "^test/"
 
 frontend:
-  - changed-files:
-      - client/**
-      - app/javascript/**
-      - spec/javascript/**
-      - config/webpack/**
-      - config/webpacker.yml
-      - babel.config.js
-      - jest.config.js
-      - postcss.config.js
-      - relay.config.js
-      - jsconfig.json
-      - yarn.lock
-      - package.json
-      - .eslintrc.yml
-      - .eslintignore
-      - .prettierrc.yml
-      - .prettierignore
-      - .autocorrectignore
-      # - any:
-      #     - "app/assets/javascripts/**"
-      #     - "!app/assets/javascripts/map/main_canvas/image_path/**"
-      #     - "!app/assets/javascripts/map/main_canvas/cell_layers_manager.js.erb"
+  - all:
+      - head-branch: ["!test/test7", "!develop"]
+      - changed-files:
+          - client/**
+          - app/javascript/**
+          - spec/javascript/**
+          - config/webpack/**
+          - config/webpacker.yml
+          - babel.config.js
+          - jest.config.js
+          - postcss.config.js
+          - relay.config.js
+          - jsconfig.json
+          - yarn.lock
+          - package.json
+          - .eslintrc.yml
+          - .eslintignore
+          - .prettierrc.yml
+          - .prettierignore
+          - .autocorrectignore
 
 "skip jenkins":
   - all:
