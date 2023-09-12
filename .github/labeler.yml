@@ -2,16 +2,21 @@
   - base-branch: master
 "merge into release":
   - base-branch: release
+feature:
+  - head-branch: ["^feature/", "^feat/"]
+enhance:
+  - head-branch: ["^enhancement/", "^enhance/"]
+bug:
+  - head-branch: ["^bug/", "^fix/"]
+chore:
+  - head-branch: "^chore/"
+test:
+  - head-branch: "^test/"
 frontend:
   - changed-files:
       - client/**/*
       - app/javascript/**/*
-      - any:
-          [
-            "app/assets/javascripts/**",
-            "!app/assets/javascripts/map/main_canvas/image_path/**",
-            "!app/assets/javascripts/map/main_canvas/cell_layers_manager.js.erb",
-          ]
+      - app/assets/javascripts/**/*
       - spec/javascript/**/*
       - config/webpack/**/*
       - config/webpacker.yml
@@ -27,16 +32,6 @@ frontend:
       - .prettierrc.yml
       - .prettierignore
       - .autocorrectignore
-"skip jenkins":
-  - changed-files:
-      - all: ["!**/*.rb", "!**/*.erb", "!config/locales/**/*"]
-feature:
-  - head-branch: ["^feature/", "^feat/"]
-enhance:
-  - head-branch: ["^enhancement/", "^enhance/"]
-bug:
-  - head-branch: ["^bug/", "^fix/"]
-chore:
-  - head-branch: "^chore/"
-test:
-  - head-branch: "^test/"
+
+"wait other branches":
+  - base-branch: ["!develop", "!master", "!release"]
