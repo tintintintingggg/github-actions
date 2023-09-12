@@ -1,3 +1,6 @@
+"wait other branches":
+  - base-branch: ["!develop", "!master", "!release"]
+
 feature:
   - head-branch: ["^feature/", "^feat/"]
 enhance:
@@ -10,26 +13,24 @@ test:
   - head-branch: "^test/"
 
 frontend:
-  - all:
-      - head-branch: ["!test/test7", "!develop"]
-      - changed-files:
-          - client/**
-          - app/javascript/**
-          - spec/javascript/**
-          - config/webpack/**
-          - config/webpacker.yml
-          - babel.config.js
-          - jest.config.js
-          - postcss.config.js
-          - relay.config.js
-          - jsconfig.json
-          - yarn.lock
-          - package.json
-          - .eslintrc.yml
-          - .eslintignore
-          - .prettierrc.yml
-          - .prettierignore
-          - .autocorrectignore
+  - changed-files:
+      - client/**
+      - app/javascript/**
+      - spec/javascript/**
+      - config/webpack/**
+      - config/webpacker.yml
+      - babel.config.js
+      - jest.config.js
+      - postcss.config.js
+      - relay.config.js
+      - jsconfig.json
+      - yarn.lock
+      - package.json
+      - .eslintrc.yml
+      - .eslintignore
+      - .prettierrc.yml
+      - .prettierignore
+      - .autocorrectignore
 
 "skip jenkins":
   - all:
